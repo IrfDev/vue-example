@@ -17,6 +17,22 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/TailwindPrefixes.vue"),
     },
+    {
+      path: "/composition-api",
+      name: "composition",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../components/CompositionApi.vue"),
+    },
+    {
+      path: "/options-api",
+      name: "options",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../components/OptionsApi.vue"),
+    },
   ],
 });
 

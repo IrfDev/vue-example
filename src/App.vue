@@ -10,6 +10,8 @@ export default {
     return {
       homeName: `Structure`,
       aboutName: `Tailwind`,
+      optionsName: `Options API`,
+      compositionName: `Composition API`,
       redButtonClicks: 0,
       blueButtonClicks: 0,
       buttons: ["red", "blue"],
@@ -48,6 +50,8 @@ export default {
       <nav>
         <RouterLink to="/">{{ homeName }}</RouterLink>
         <RouterLink to="/tailwind-prefixes">{{ aboutName }}</RouterLink>
+        <RouterLink to="/options-api">{{ optionsName }}</RouterLink>
+        <RouterLink to="/composition-api">{{ compositionName }}</RouterLink>
       </nav>
     </div>
   </header>
