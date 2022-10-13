@@ -1,18 +1,53 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
+import "./assets/tailwind.css";
+
+export default {
+  name: "App",
+
+  data() {
+    return {
+      homeName: `Structure`,
+      aboutName: `Tailwind`,
+      redButtonClicks: 0,
+      blueButtonClicks: 0,
+      buttons: ["red", "blue"],
+    };
+  },
+
+  methods: {
+    name() {},
+  },
+
+  computed: {
+    redButtonClickString() {
+      return `${this.redButtonClicks} clicks on red button`;
+    },
+
+    blueButtonClickString() {
+      return `${this.blueButtonClicks} clicks on red button`;
+    },
+  },
+};
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <header class="w-full block">
+    <img
+      alt="Vue logo"
+      class="logo"
+      src="@/assets/logo.svg"
+      width="125"
+      height="125"
+    />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="You did it!" anotherWord="Amigo" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">{{ homeName }}</RouterLink>
+        <RouterLink to="/tailwind-prefixes">{{ aboutName }}</RouterLink>
       </nav>
     </div>
   </header>
